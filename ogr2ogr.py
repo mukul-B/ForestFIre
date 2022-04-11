@@ -43,7 +43,8 @@ from osgeo import gdal
 from osgeo import ogr
 from osgeo import osr
 
-
+import warnings
+warnings.filterwarnings('ignore')
 ###############################################################################
 
 class ScaledProgressObject:
@@ -142,7 +143,7 @@ GeomOperation = Enum(["NONE", "SEGMENTIZE", "SIMPLIFY_PRESERVE_TOPOLOGY"])
 
 
 def main(args=None, progress_func=TermProgress, progress_data=None):
-    print("helooooooooooooooooooooo")
+
     global bSkipFailures
     global nGroupTransactions
     global bPreserveFID
