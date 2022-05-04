@@ -32,6 +32,8 @@ for filename in directory:
         if count == 0:
             orgshell.merge2shape(source, destination)
             orgshell.add_field_in_shape(destination, merge,"timeinint")
+            orgshell.add_field_in_shape(destination, merge, "fileHM","STRING")
+            orgshell.add_field_in_shape(destination, merge, "fieldHM", "STRING")
 
         d = filename2time(filename)
         orgshell.add_value_field(source, destination, filename,"timeinint", d)
